@@ -37,6 +37,16 @@ Before starting a span, the agent retrieves (atomically gets and removes) the sp
 If there is no span in the buffer, the agent creates a new span instance.
 Otherwise, it will re-use the recycled instance.
 
+```java
+public Span startSpan(BaseSpan parent) {
+    Span span = parent.retrieveRecycled()
+    if (span == null) {
+        span = new Span()
+    }
+    return span
+}
+```
+
 ## Benefits over using an object pool
 
 One benefit of buffering a recycled span on its parent compared to returning it into a sharded object pool is less contention.
