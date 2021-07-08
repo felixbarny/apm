@@ -89,3 +89,8 @@ even for spans that exceed `transaction_max_spans`.
 
 For spans that are known to be dropped upfront, Agents SHOULD NOT collect information that is expensive to get and not needed for metrics collection.
 This includes capturing headers, request bodies, and summarizing SQL statements, for example.
+
+#### Re-using discarded spans
+
+To reduce the memory allocation overhead of  Agents MAY re-use discarded spans as specified in [Recycling dropped and compressed spans](tracing-spans-recycling.md).
+

@@ -6,6 +6,9 @@ To still retain some information about dropped spans (for example due to [`trans
 agents SHOULD collect statistics on the corresponding transaction about dropped spans.
 These statistics MUST only be sent for sampled transactions.
 
+Spans that are discarded because of [span compression](tracing-spans-compress.md) MUST NOT be included in the dropped span stats.
+That is because they are represented via their [composite span](tracing-spans-compress.md#composite-span).
+
 ### Use cases
 
 This allows APM Server to consider these metrics for the service destination metrics.

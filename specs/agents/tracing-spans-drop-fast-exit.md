@@ -79,3 +79,7 @@ This ensures that a dropped fast span doesn't consume from the max spans limit.
 
 To reduce the data loss, agents [collect statistics about dropped spans](tracing-spans-dropped-stats.md).
 Dropped spans contribute to [breakdown metrics](https://docs.google.com/document/d/1-_LuC9zhmva0VvLgtI0KcHuLzNztPHbcM0ZdlcPUl64#heading=h.ondan294nbpt) the same way as non-discarded spans.
+
+### Re-using discarded spans
+
+Agents MAY re-use discarded spans as specified in [Recycling dropped and compressed spans](tracing-spans-recycling.md).

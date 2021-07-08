@@ -25,6 +25,8 @@ However, they aim to provide a better tradeoff between cost and insight by not c
   If a span was blazingly fast, it's probably not worth the cost to send and store it.
 - [Compressing spans](tracing-spans-compress.md) \
   If there are a bunch of very similar spans, we can represent them in a single document - a composite span.
+- [Recycling dropped spans](tracing-spans-recycling.md)
+  To reduce memory allocation overhead, agents may re-use dropped span objects.
 
 In a nutshell, this is how the different settings work in combination:
 

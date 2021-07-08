@@ -195,6 +195,10 @@ void tryCompress(Span child) {
 }
 ```
 
+#### Re-using compressed spans
+
+Agents MAY re-use discarded compressed spans as specified in [Recycling dropped and compressed spans](tracing-spans-recycling.md).
+
 #### Concurrency
 
 The pseudo-code in this spec is intentionally not written in a thread-safe manner to make it more concise.
